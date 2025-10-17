@@ -21,7 +21,7 @@ export class StockList implements OnInit {
     this.stocks$ = this.stockService.stocks$;
   }
 
-  deleteStock(id: number) {
+  deleteStock(id: string | number) {
     if (confirm('Delete this stock?')) {
       this.stockService.deleteStock(id).subscribe();
     }
