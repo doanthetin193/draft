@@ -1,0 +1,77 @@
+{
+  "stocks": [
+    {
+      "id": "1",
+      "name": "Test Stock Company",
+      "code": "TSC",
+      "price": "85",
+      "previousPrice": "80",
+      "exchange": "NASDAQ",
+      "favorite": false
+    },
+    {
+      "name": "Second Stock Company",
+      "code": "SSC",
+      "price": "10",
+      "previousPrice": 21,
+      "exchange": "NSE",
+      "favorite": false,
+      "id": "2"
+    },
+    {
+      "name": "Last Stock Company",
+      "code": "LSC",
+      "price": "876",
+      "previousPrice": 76,
+      "exchange": "NYSE",
+      "favorite": false,
+      "id": "3"
+    },
+    {
+      "name": "aar",
+      "code": "fdsfsa",
+      "price": 434,
+      "previousPrice": 52,
+      "exchange": "NASDAQ",
+      "favorite": false,
+      "id": "86e3"
+    },
+    {
+      "id": "1a5c",
+      "name": "dá",
+      "code": "sfdá",
+      "price": 56,
+      "previousPrice": 43523,
+      "exchange": "NASDAQ",
+      "favorite": false
+    },
+    {
+      "id": "0362",
+      "name": "fdsdf",
+      "code": "dffs",
+      "price": 43,
+      "previousPrice": 34,
+      "exchange": "NYSE",
+      "favorite": false
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "email": "admin@stockmarket.com",
+      "fullName": "Administrator"
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "password": "user123",
+      "email": "user1@example.com",
+      "fullName": "User One"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

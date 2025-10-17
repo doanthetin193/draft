@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="nav-brand">Stock Market App</div>
+  
+  <div class="nav-links" *ngIf="userService.isAuthenticated$ | async">
+    <a routerLink="/stocks" routerLinkActive="active">Stock List</a>
+    <a routerLink="/create" routerLinkActive="active">Create Stock</a>
+    <span class="user-info">{{ (userService.currentUser$ | async)?.fullName }}</span>
+    <button (click)="logout()">Logout</button>
+  </div>
+  
+  <div class="nav-links" *ngIf="!(userService.isAuthenticated$ | async)">
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+  </div>
+</nav>

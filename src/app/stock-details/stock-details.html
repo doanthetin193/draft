@@ -1,0 +1,19 @@
+<div class="details-container">
+  <h2>Stock Details</h2>
+  
+  <app-stock-item *ngIf="stock" [stock]="stock"></app-stock-item>
+  
+  <div *ngIf="stock" class="extra-info">
+    <p><strong>Previous Price:</strong> ${{ stock.previousPrice }}</p>
+    <p><strong>Change:</strong> 
+      <span [style.color]="stock.isPositiveChange() ? 'green' : 'red'">
+        {{ stock.isPositiveChange() ? '↑' : '↓' }}
+        ${{ stock.price - stock.previousPrice }}
+      </span>
+    </p>
+  </div>
+  
+  <div *ngIf="!stock">Loading...</div>
+  
+  <a routerLink="/stocks">← Back to List</a>
+</div>

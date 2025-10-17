@@ -1,0 +1,25 @@
+<h2>Stock List</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Price</th>
+      <th>Exchange</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of stocks$ | async">
+      <td>{{ stock.name }}</td>
+      <td>{{ stock.code }}</td>
+      <td>${{ stock.price }}</td>
+      <td>{{ stock.exchange }}</td>
+      <td>
+        <a [routerLink]="['/stocks', stock.id]">View</a>
+        <button (click)="stock.id && deleteStock(stock.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

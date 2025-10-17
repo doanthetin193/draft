@@ -1,0 +1,33 @@
+<h2>Create New Stock</h2>
+
+<form [formGroup]="stockForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Stock Name:</label>
+    <input type="text" formControlName="name" required />
+  </div>
+
+  <div>
+    <label>Stock Code:</label>
+    <input type="text" formControlName="code" required />
+  </div>
+
+  <div>
+    <label>Price:</label>
+    <input type="number" formControlName="price" required />
+  </div>
+
+  <div>
+    <label>Previous Price:</label>
+    <input type="number" formControlName="previousPrice" required />
+  </div>
+
+  <div>
+    <label>Exchange:</label>
+    <select formControlName="exchange" required>
+      <option value="">-- Select --</option>
+      <option *ngFor="let ex of exchanges" [value]="ex">{{ ex }}</option>
+    </select>
+  </div>
+
+  <button type="submit" [disabled]="stockForm.invalid">Create Stock</button>
+</form>
